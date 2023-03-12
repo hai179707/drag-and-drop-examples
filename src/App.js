@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import DropAnswer from "./components/DropAnswer"
+import SortList from "./components/SortList"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="font-poppins min-h-screen bg-gray-200 text-primary">
+      <div className="flex flex-wrap container mx-auto">
+        <div className="w-1/2">
+          <DropAnswer />
+        </div>
+        <div className="w-1/2 pl-10">
+          <SortList />
+        </div>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
