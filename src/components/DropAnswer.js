@@ -31,7 +31,12 @@ function DropAnswer() {
     }
 
     const handleDrop = e => {
-        setAnswerList(prev => prev.filter(item => item !== answerSeleted))
+        if(answers.some(ans => ans === e.target.innerText)) {
+            setAnswerList([...answerList.filter(item => item !== answerSeleted), e.target.innerText])
+        } 
+        else {
+            setAnswerList(prev => prev.filter(item => item !== answerSeleted))
+        }
         e.target.innerText = answerSeleted
         e.target.classList.remove('drag-over')
         e.target.classList.add('cursor-pointer', 'hover:text-red-500', 'dropped')
