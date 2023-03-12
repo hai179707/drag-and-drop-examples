@@ -24,10 +24,12 @@ function SortList() {
             items.splice(draggedOverItemIndex, 0, draggedItem)
             setSelectedItems(items)
         }
+        // eslint-disable-next-line
     }, [draggedOverItem])
 
     const handleApply = useCallback(() => {
         console.log(selectedItems)
+        // eslint-disable-next-line
     }, [])
 
     const handleSelectItem = useCallback(item => {
